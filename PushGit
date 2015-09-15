@@ -1,0 +1,29 @@
+
+#!/bin/bash
+# File_name test.sh
+
+echo ""
+echo ""
+
+echo " ##########################"
+echo " #####  Enter = exit ######"
+echo " #####  press 1= run url ##"
+echo " ##########################"
+echo ""
+echo -n "CHOICE NUMBER : [Enter:Exit] : "
+read  CHOICE
+if [ "$CHOICE" = "1" ]; then
+
+   echo ""
+
+    read -p "Enter ur url:" u_url
+    echo ""
+    git init
+    git --version
+    git add .
+    git commit -m 'Initial commit'
+    git remote add origin   $u_url
+    git push origin master 
+
+
+fi
